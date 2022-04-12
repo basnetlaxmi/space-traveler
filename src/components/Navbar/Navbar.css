@@ -1,12 +1,13 @@
 ul {
-    list-style: none;
+  list-style: none;
 }
-a{
-    text-decoration: none;
-    color: #000;
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 .active {
-    text-decoration: underline;
-    color: red;
+  text-decoration: underline;
+  color: red;
 }

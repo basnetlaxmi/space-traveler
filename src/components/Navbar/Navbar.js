@@ -8,7 +8,7 @@ const Navbar = () => (
 
     <h1>{'Space Travelers\' Hub'}</h1>
     <nav>
-      <ul>
+      <ul id="nav-list">
         <li>
           <NavLink to="/">Rockets</NavLink>
         </li>

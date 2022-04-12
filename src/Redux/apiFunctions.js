@@ -3,11 +3,11 @@ const missions = 'https://api.spacexdata.com/v3/missions';
 
 const loadRockets = async () => rockets;
 
-const fetchMissionsData = async (missions) => {
-    const response = await fetch(missions).then((res) => res.json());
-    return response;
+const fetchMissionsData = async () => {
+    const response = await fetch(missions).then((res) => res.json()).then((result)=> result);
+    // return response;
     console.log(response);
    
 }
-
+fetchMissionsData();
 export { loadRockets, fetchMissionsData };

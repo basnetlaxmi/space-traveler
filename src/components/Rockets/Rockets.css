@@ -1,3 +1,7 @@
-#rocket-list > li {
+.rocket-card {
   margin: 1rem 0;
+}
+
+.rocket-card > img {
+   width: 15%;
 }

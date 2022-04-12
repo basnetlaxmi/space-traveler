@@ -1,4 +1,5 @@
 const rockets = 'https://api.spacexdata.com/v3/rockets';
+const missions = 'https://api.spacexdata.com/v3/missions';
 
 const loadRockets = async () => {
   const response = await fetch(rockets).then((res) => res.json()).then((allRockets) => allRockets);
@@ -13,4 +14,6 @@ const loadRockets = async () => {
   return rocketsArr;
 };
 
-export default loadRockets;
+const fetchMissionsData = async () => missions;
+
+export { loadRockets, fetchMissionsData };

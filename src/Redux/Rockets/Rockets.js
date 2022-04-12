@@ -1,4 +1,4 @@
-import loadRockets from '../apiFunctions';
+import { loadRockets } from '../apiFunctions';
 
 const LOAD_ROCKETS = 'space-traveler/Rockets/LOAD_ROCKETS';
 const ROCKETS_LOADED = 'space-traveler/Rockets/ROCKETS_LOADED';

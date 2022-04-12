@@ -2,7 +2,7 @@
 // Constant
 const FETCH_MISSIONS = 'space-traveler/Missions/FETCH_MISSIONS';
 // Action
-export const fetchMission = async (dispatch) => {
+export const fetchMission = () => async (dispatch) => {
   dispatch({ type: FETCH_MISSIONS });
 };
 

@@ -5,13 +5,13 @@ const Navbar = () => (
   <nav>
     <ul>
       <li>
-        <NavLink to='/'>Rockets</NavLink>
+        <NavLink to="/">Rockets</NavLink>
       </li>
       <li>
-        <NavLink to='missions'>Missions</NavLink>
+        <NavLink to="missions">Missions</NavLink>
       </li>
       <li>
-        <NavLink to='profile'>Profile</NavLink>
+        <NavLink to="profile">Profile</NavLink>
       </li>
     </ul>
   </nav>

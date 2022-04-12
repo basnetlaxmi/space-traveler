@@ -1,3 +1,3 @@
-const Profile = () => null ;
+const Profile = () => null;
 
 export default Profile;

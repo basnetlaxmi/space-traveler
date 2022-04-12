@@ -1,9 +1,11 @@
-// import fetchMissionData from '../apiFunctions';
+import { fetchMissionsData } from '../apiFunctions';
 // Constant
 const FETCH_MISSIONS = 'space-traveler/Missions/FETCH_MISSIONS';
 // Action
-export const fetchMission = async (dispatch) => {
-  dispatch({ type: FETCH_MISSIONS });
+export const fetchMission = () => async(dispatch) => {
+  const response = await fetchMissionsData();
+  dispatch({ type: FETCH_MISSIONS, payload: response });
+ 
 };
 
 // Reducers
@@ -12,6 +14,11 @@ const initialState = {
 };
 const missionReducer = (state = initialState, action) => {
   switch (action.type) {
+    case FETCH_MISSIONS :
+        return {
+            ...state,
+            mission: action.payload
+        }
     default:
       return state;
   }

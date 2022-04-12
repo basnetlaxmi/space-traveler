@@ -3,6 +3,6 @@ const missions = 'https://api.spacexdata.com/v3/missions';
 
 const loadRockets = async () => rockets;
 
-const fetchMissions = async () => missions;
+const fetchMissionsData = async () => missions;
 
-export default loadRockets;
+export { loadRockets, fetchMissionsData };

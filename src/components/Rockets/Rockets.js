@@ -1,8 +1,10 @@
-import { useSelector, shallowEqual } from 'react-redux';
+import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import './Rockets.css';
+import { reserveRocket } from '../../Redux/Rockets/Rockets';
 
 const Rockets = () => {
   const rockets = useSelector((state) => state.rocketsReducer.rockets, shallowEqual);
+  const dispatch = useDispatch();
   return (
     <ul id="rocket-list">
       {
@@ -11,7 +13,9 @@ const Rockets = () => {
           <img alt="rocket img" src={rocket.flickr_images[0]} />
           <p className="rocket-name">{rocket.name}</p>
           <p className="rocket-description">{rocket.description}</p>
-          <button type="button">Reserve Rocket</button>
+          <button onClick={(e, id = rocket.id) => dispatch(reserveRocket(id))} type="button">
+            Reserve Rocket
+          </button>
         </li>
       ))
     }

@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { rocketLoad } from './Redux/Rockets/Rockets';
 import Navbar from './components/Navbar/Navbar';
 import Rockets from './components/Rockets/Rockets';

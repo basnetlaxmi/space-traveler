@@ -6,9 +6,13 @@ import Navbar from './components/Navbar/Navbar';
 import Rockets from './components/Rockets/Rockets';
 import Missions from './components/Missions/Missions';
 import Profile from './components/Profile/Profile';
+import { fetchMission } from './Redux/Missions/Missions';
 
 const App = () => {
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchMission());
+  }, []);
   useEffect(() => dispatch(rocketLoad()), []);
   return (
     <>
@@ -21,5 +25,4 @@ const App = () => {
     </>
   );
 };
-
 export default App;

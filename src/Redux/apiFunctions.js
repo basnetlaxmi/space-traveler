@@ -8,6 +8,7 @@ const loadRockets = async () => {
       id: rocket.id,
       name: rocket.rocket_name,
       type: rocket.rocket_type,
+      description: rocket.description,
       flickr_images: rocket.flickr_images,
     }
   ));

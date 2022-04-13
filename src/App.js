@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { rocketLoad } from './Redux/Rockets/Rockets';
 import Navbar from './components/Navbar/Navbar';
 import Rockets from './components/Rockets/Rockets';
 import Missions from './components/Missions/Missions';
@@ -12,9 +13,9 @@ const App = () => {
   useEffect(() => {
     dispatch(fetchMission());
   }, []);
+  useEffect(() => dispatch(rocketLoad()), []);
   return (
     <>
-
       <Navbar />
       <Routes>
         <Route path="/" element={<Rockets />} />

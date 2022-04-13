@@ -4,7 +4,6 @@ import './Missions.css';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missionReducer.missions);
-  console.log(missions);
   return (
     <div className="m-4">
       <Table striped bordered>

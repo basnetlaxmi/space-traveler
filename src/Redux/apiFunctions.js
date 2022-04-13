@@ -14,5 +14,4 @@ const fetchMissionsData = async () => {
   ));
   return missionArr;
 };
-// fetchMissionsData();
 export { loadRockets, fetchMissionsData };

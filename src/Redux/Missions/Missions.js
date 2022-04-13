@@ -4,7 +4,6 @@ const FETCH_MISSIONS = 'space-traveler/Missions/FETCH_MISSIONS';
 // Action
 export const fetchMission = () => async (dispatch) => {
   const res = await fetchMissionsData();
-  // console.log(res);
   dispatch({ type: FETCH_MISSIONS, payload: res });
 };
 

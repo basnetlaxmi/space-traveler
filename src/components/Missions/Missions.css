@@ -1,0 +1,21 @@
+body {
+  overflow-x: hidden;
+}
+
+td {
+  font-size: 1rem;
+}
+
+.member-btn {
+  background-color: #828990;
+  color: #fff;
+  width: 150px;
+  padding: 0;
+  margin: 50px auto;
+}
+
+.join-btn {
+  width: 150px;
+  padding: 0;
+  margin: 50px auto;
+}

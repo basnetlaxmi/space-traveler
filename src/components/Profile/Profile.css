@@ -1,0 +1,30 @@
+.reserved-rockets-container {
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+}
+
+.reserved-rockets-container > h2 {
+  margin-bottom: 0;
+}
+
+.reserved-rockets {
+  width: 25vw;
+  margin: 0;
+  margin-top: 0.5rem;
+  border: 1.5px solid #dfdfdf;
+  border-radius: 4px;
+}
+
+.reserved-rockets > li {
+  border-bottom: 1.5px solid #dfdfdf;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.reserved-rockets > li:last-child {
+  border: none;
+}
+
+.reserved-rockets > li > p {
+  font-weight: bold;
+}

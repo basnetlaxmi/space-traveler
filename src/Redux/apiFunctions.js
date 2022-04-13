@@ -5,9 +5,8 @@ const loadRockets = async () => rockets;
 
 const fetchMissionsData = async () => {
     const response = await fetch(missions).then((res) => res.json()).then((result)=> result);
-    // return response;
-    console.log(response);
+    return response;
    
 }
-fetchMissionsData();
+// fetchMissionsData();
 export { loadRockets, fetchMissionsData };

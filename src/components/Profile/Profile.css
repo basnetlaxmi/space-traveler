@@ -13,6 +13,7 @@
   margin-top: 0.5rem;
   border: 1.5px solid #dfdfdf;
   border-radius: 4px;
+  padding: 0;
 }
 
 .reserved-rockets > li {
@@ -27,4 +28,5 @@
 
 .reserved-rockets > li > p {
   font-weight: bold;
+  margin-top: 1rem;
 }

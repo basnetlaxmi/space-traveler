@@ -12,18 +12,23 @@ td {
   width: 150px;
   padding: 0;
   margin: 50px auto;
+  border-radius: 5px;
 }
 
-.join-btn {
+.join-leave-btn {
   width: 150px;
-  padding: 0;
+  padding: 5px;
   margin: 50px auto;
+  border-radius: 5px;
 }
 
 .leave-btn {
-  width: 150px;
-  padding: 0;
-  margin: 50px auto;
   color: #de4956;
   border-color: #de4956;
+}
+
+.active-member {
+  background-color: #18a2b8;
+  color: #fff;
+  border-color: #18a2b8;
 }

@@ -1,7 +1,9 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './Profile.css';
+import { leaveMission } from '../../Redux/Missions/Missions';
 
 const Profile = () => {
+  const dispatch = useDispatch();
   const reservedRockets = useSelector(
     (state) => state.rocketsReducer.rockets.filter((rocket) => rocket.reserved === true),
   );
@@ -25,7 +27,14 @@ const Profile = () => {
         <ul className="joined-missions">
           {
         joinedMission.length
-          ? joinedMission.map((mission) => <li key={mission.id}><p>{mission.name}</p></li>)
+          ? joinedMission.map((mission) => (
+
+            <li className="d-flex" key={mission.id}>
+              <p>{mission.name}</p>
+              <button type="button" className="profile-leave-btn ms-5 mt-1 btn-danger" onClick={() => dispatch(leaveMission(mission.id))}>Leave Mission</button>
+            </li>
+
+          ))
           : <li><p>{'You didn\'t join any mission yet.'}</p></li>
        }
         </ul>

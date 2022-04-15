@@ -1,0 +1,34 @@
+body {
+  overflow-x: hidden;
+}
+
+td {
+  font-size: 1rem;
+}
+
+.member-btn {
+  background-color: #828990;
+  color: #fff;
+  width: 150px;
+  padding: 0;
+  margin: 50px auto;
+  border-radius: 5px;
+}
+
+.join-leave-btn {
+  width: 150px;
+  padding: 5px;
+  margin: 50px auto;
+  border-radius: 5px;
+}
+
+.leave-btn {
+  color: #de4956;
+  border-color: #de4956;
+}
+
+.active-member {
+  background-color: #18a2b8;
+  color: #fff;
+  border-color: #18a2b8;
+}

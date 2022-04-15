@@ -1,0 +1,40 @@
+header {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 4rem 0.5rem 1rem;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+}
+
+nav {
+  margin-left: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+#nav-list {
+  display: flex;
+  gap: 2vw;
+}
+
+#nav-list > li > a {
+  color: #007bff;
+}
+
+#nav-list > li:nth-child(2) {
+  border-right: 2px solid #000;
+  padding-right: 2vw;
+  padding-left: 0.5vw;
+}
+
+.active {
+  text-decoration: underline;
+  color: red;
+}

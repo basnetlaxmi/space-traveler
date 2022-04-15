@@ -1,0 +1,10 @@
+@import url('https://fonts.cdnfonts.com/css/fortela-typeface');
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+* {
+  font-family: 'Fortela Typeface', sans-serif;
+}

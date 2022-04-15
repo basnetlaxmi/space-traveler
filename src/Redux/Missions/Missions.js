@@ -22,8 +22,6 @@ export const leaveMission = (id) => ({
 // Reducers
 const initialState = {
   missions: [],
-  joined: [],
-
 };
 const missionReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -44,6 +42,7 @@ const missionReducer = (state = initialState, action) => {
       return {
         ...state,
         missions: [...newState],
+
       };
     }
     case LEAVE_MISSION:

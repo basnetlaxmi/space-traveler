@@ -29,9 +29,9 @@ const Profile = () => {
         joinedMission.length
           ? joinedMission.map((mission) => (
 
-            <li className="d-flex" key={mission.id}>
+            <li className="d-flex justify-content-between" key={mission.id}>
               <p>{mission.name}</p>
-              <button type="button" className="profile-leave-btn ms-5 mt-1 btn-danger" onClick={() => dispatch(leaveMission(mission.id))}>Leave Mission</button>
+              <button type="button" className="profile-leave-btn ms-5 mt-1 me-2 btn-danger" onClick={() => dispatch(leaveMission(mission.id))}>Leave Mission</button>
             </li>
 
           ))

@@ -9,7 +9,7 @@ export const fetchMission = () => async (dispatch) => {
 };
 
 export const joinMission = (id) => ({
-  type: joinMission,
+  type: JOIN_MISSION,
   payload: id,
 });
 
@@ -29,13 +29,19 @@ const missionReducer = (state = initialState, action) => {
       };
     case JOIN_MISSION:
     {
-      const inJoined = state.joined.find((item) => item.id === action.payload);
-      const findItem = state.missions.filter((item) => item.id === action.payload);
-      console.log(findItem);
+      // // const inJoined = state.joined.find((item) => item.id === action.payload.id);
+      // const findItem = state.missions.filter((item) => item.id === action.payload);
+      // console.log(findItem);
+      const newState = state.missions.map((mission) => {
+        if (mission.id !== action.payload) {
+          return mission;
+        }
+        return { ...mission, reserved: true };
+      });
+      console.log(newState);
       return {
         ...state,
-        missions: inJoined ? [...state.missions, { ...inJoined, reserved: false }]
-          : [...state.missions, { ...findItem, reserved: true }],
+        missions: [...newState],
       };
     }
     default:

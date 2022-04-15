@@ -11,6 +11,34 @@
 - JSX & React & Redux
 - React&Redux linters
 
+### Screenshots
+**rockets:**
+
+![screenshot1](https://user-images.githubusercontent.com/70805060/163586136-333ad538-5117-4763-8a88-b7e150f1265b.PNG)
+<br>
+<br>
+<br>
+<br>
+![screenshot1-1](https://user-images.githubusercontent.com/70805060/163586176-45a8f0f8-3b2a-4e6d-916c-ca03ae1cf86d.PNG)
+
+**missions:**
+
+![screenshot2](https://user-images.githubusercontent.com/70805060/163586575-522bfbe1-7bd1-4c4c-8b74-b1d7fcc86760.PNG)
+<br>
+<br>
+<br>
+<br>
+![screenshot2-2](https://user-images.githubusercontent.com/70805060/163586620-a8c27f70-0e1e-4480-ba84-4b0b99f9cbca.PNG)
+
+**profile:**
+
+![screenshot3](https://user-images.githubusercontent.com/70805060/163586690-deea12ca-bfe9-4037-8216-59c82ae934bc.PNG)
+<br>
+<br>
+<br>
+<br>
+![screenshot3-3](https://user-images.githubusercontent.com/70805060/163586715-42058aa6-bb1f-4df1-a1ae-67f028d25fb2.PNG)
+
 ### Live Demo 
 
 [Live Demo](https://saied-laxmi-spacetraveler.netlify.app)

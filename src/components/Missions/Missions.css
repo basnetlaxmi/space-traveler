@@ -24,5 +24,6 @@ td {
   width: 150px;
   padding: 0;
   margin: 50px auto;
-  color: red;
+  color: #de4956;
+  border-color: #de4956;
 }

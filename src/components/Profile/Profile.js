@@ -20,9 +20,9 @@ const Profile = () => {
         }
         </ul>
       </div>
-      <div className="reserved-rockets-container ms-5">
+      <div className="joined-mission-container">
         <h2>My Missions</h2>
-        <ul className="reserved-rockets">
+        <ul className="joined-missions">
           {
         joinedMission.length
           ? joinedMission.map((mission) => <li key={mission.id}><p>{mission.name}</p></li>)

@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
+import { Table } from 'react-bootstrap';
 import store from '../../Redux/createStore';
 import Missions from './Missions';
 import Mission from './Mission';
@@ -14,7 +15,11 @@ describe('Missions', () => {
   };
   render(
     <Provider store={store}>
-      <Mission mission={mission} />
+      <Table>
+        <tbody>
+          <Mission mission={mission} />
+        </tbody>
+      </Table>
     </Provider>,
   );
   const renderMissions = render(<Provider store={store}><Missions /></Provider>);

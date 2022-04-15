@@ -2,8 +2,7 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { joinMission, leaveMission } from '../../Redux/Missions/Missions';
 
-const Mission = (props) => {
-  const { mission } = props;
+const Mission = ({ mission }) => {
   const dispatch = useDispatch();
   return (
     <tr>
@@ -21,6 +20,8 @@ const Mission = (props) => {
   );
 };
 Mission.propTypes = {
-  mission: PropTypes.objectOf(PropTypes.string).isRequired,
+  mission: PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  ).isRequired,
 };
 export default Mission;

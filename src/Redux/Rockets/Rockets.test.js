@@ -77,7 +77,7 @@ describe('rocketsReducer', () => {
       ],
     };
     const action = {
-      type: 'space-traveler/Rockets/RESERVE_ROCKET',
+      type: 'space-traveler/Rockets/RESERVE_OR_CANCEL_ROCKET',
       payload: 2,
     };
     const result = rocketsReducer(state, action);
@@ -96,7 +96,7 @@ describe('rocketsReducer', () => {
       ],
     };
     const action = {
-      type: 'space-traveler/Rockets/RESERVE_ROCKET',
+      type: 'space-traveler/Rockets/RESERVE_OR_CANCEL_ROCKET',
       payload: 2,
     };
     const result = rocketsReducer(state, action);

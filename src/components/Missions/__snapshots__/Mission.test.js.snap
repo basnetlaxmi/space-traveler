@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Missions Take snapshot for Missions 1`] = `
+exports[`test mission 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -38,58 +38,40 @@ Object {
         </tbody>
       </table>
     </div>
-    <div>
-      <div
-        class="m-4"
-      >
-        <table
-          class="table table-striped table-bordered"
-          role="row"
-        >
-          <thead>
-            <tr>
-              <th>
-                Mission
-              </th>
-              <th>
-                Description
-              </th>
-              <th>
-                Status
-              </th>
-              <th />
-            </tr>
-          </thead>
-          <tbody />
-        </table>
-      </div>
-    </div>
   </body>,
   "container": <div>
-    <div
-      class="m-4"
+    <table
+      class="table"
     >
-      <table
-        class="table table-striped table-bordered"
-        role="row"
-      >
-        <thead>
-          <tr>
-            <th>
-              Mission
-            </th>
-            <th>
-              Description
-            </th>
-            <th>
-              Status
-            </th>
-            <th />
-          </tr>
-        </thead>
-        <tbody />
-      </table>
-    </div>
+      <tbody>
+        <tr>
+          <td>
+            <b>
+              Telstar
+            </b>
+          </td>
+          <td>
+            This is a description of Telstar
+          </td>
+          <td>
+            <button
+              class="member-btn text-center"
+              type="button"
+            >
+              Not a member
+            </button>
+          </td>
+          <td>
+            <button
+              class="join-leave-btn"
+              type="button"
+            >
+              Join Mission
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

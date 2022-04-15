@@ -1,9 +1,11 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Table } from 'react-bootstrap';
 import './Missions.css';
+import { joinMission } from '../../Redux/Missions/Missions';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missionReducer.missions);
+  const dispatch = useDispatch();
   return (
     <div className="m-4">
       <Table striped bordered>
@@ -21,7 +23,10 @@ const Missions = () => {
               <td><b>{mission.name}</b></td>
               <td>{mission.description}</td>
               <td><button type="button" className="member-btn text-center">Not a Member</button></td>
-              <td><button type="button" className="join-btn">Join Mission</button></td>
+              {mission.reserved
+                ? <td><button type="button" className="leave-btn">Leave Mission</button></td>
+                : <td><button type="button" className="join-btn" onClick={() => dispatch(joinMission(mission.id))}>Join Mission</button></td>}
+
             </tr>
           ))}
 

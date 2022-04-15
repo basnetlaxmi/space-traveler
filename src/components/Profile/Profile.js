@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import './Profile.css';
 import { leaveMission } from '../../Redux/Missions/Missions';
+import { reserveRocket } from '../../Redux/Rockets/Rockets';
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,22 @@ const Profile = () => {
         <ul className="reserved-rockets">
           {
          reservedRockets.length
-           ? reservedRockets.map((rocket) => <li key={rocket.id}><p>{rocket.name}</p></li>)
+           ? reservedRockets.map((rocket) => (
+             (
+               <li key={rocket.id} className="d-flex justify-content-between">
+                 <p>{rocket.name}</p>
+                 <button
+                   onClick={() => dispatch(reserveRocket(rocket.id))}
+                   className="cancel-rocket ms-5 mt-1 me-2 btn-danger"
+                   type="button"
+                 >
+                   Cancel Reservation
+                 </button>
+               </li>
+
+             )
+
+           ))
            : <li><p>{'You didn\'t reserve any Rocket yet.'}</p></li>
         }
         </ul>

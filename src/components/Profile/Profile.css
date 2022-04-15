@@ -1,13 +1,20 @@
-.reserved-rockets-container {
+.reserved-rockets-container,
+.joined-mission-container {
   padding-left: 1rem;
   padding-top: 0.5rem;
 }
 
-.reserved-rockets-container > h2 {
+.joined-mission-container {
+  margin-left: 100px;
+}
+
+.reserved-rockets-container > h2,
+.joined-mission-container > h2 {
   margin-bottom: 0;
 }
 
-.reserved-rockets {
+.reserved-rockets,
+.joined-missions {
   width: 25vw;
   margin: 0;
   margin-top: 0.5rem;
@@ -16,17 +23,31 @@
   padding: 0;
 }
 
-.reserved-rockets > li {
+.joined-missions {
+  width: 50vw;
+}
+
+.reserved-rockets > li,
+.joined-missions > li {
   border-bottom: 1.5px solid #dfdfdf;
   padding-left: 1rem;
   padding-bottom: 0.5rem;
 }
 
-.reserved-rockets > li:last-child {
+.reserved-rockets > li:last-child,
+.joined-missions > li:last-child {
   border: none;
 }
 
-.reserved-rockets > li > p {
+.reserved-rockets > li > p,
+.joined-missions > li > p {
+  font-weight: bold;
+}
+
+.profile-leave-btn {
+  width: 92px;
+  height: 30px;
+  font-size: 11px;
   font-weight: bold;
   margin-top: 1rem;
 }

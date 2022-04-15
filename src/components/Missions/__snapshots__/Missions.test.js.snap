@@ -1,84 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test profile component 1`] = `
+exports[`Missions Take snapshot for Missions 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="d-flex"
+      <table
+        class="table"
       >
-        <div
-          class="reserved-rockets-container"
+        <tbody>
+          <tr>
+            <td>
+              <b>
+                Telstar
+              </b>
+            </td>
+            <td>
+              This is a description of Telstar
+            </td>
+            <td>
+              <button
+                class="member-btn text-center"
+                type="button"
+              >
+                Not a member
+              </button>
+            </td>
+            <td>
+              <button
+                class="join-leave-btn"
+                type="button"
+              >
+                Join Mission
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div
+        class="m-4"
+      >
+        <table
+          class="table table-striped table-bordered"
+          role="row"
         >
-          <h2>
-            My Rockets
-          </h2>
-          <ul
-            class="reserved-rockets"
-          >
-            <li>
-              <p>
-                You didn't reserve any Rocket yet.
-              </p>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="joined-mission-container"
-        >
-          <h2>
-            My Missions
-          </h2>
-          <ul
-            class="joined-missions"
-          >
-            <li>
-              <p>
-                You didn't join any mission yet.
-              </p>
-            </li>
-          </ul>
-        </div>
+          <thead>
+            <tr>
+              <th>
+                Mission
+              </th>
+              <th>
+                Description
+              </th>
+              <th>
+                Status
+              </th>
+              <th />
+            </tr>
+          </thead>
+          <tbody />
+        </table>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="d-flex"
+      class="m-4"
     >
-      <div
-        class="reserved-rockets-container"
+      <table
+        class="table table-striped table-bordered"
+        role="row"
       >
-        <h2>
-          My Rockets
-        </h2>
-        <ul
-          class="reserved-rockets"
-        >
-          <li>
-            <p>
-              You didn't reserve any Rocket yet.
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div
-        class="joined-mission-container"
-      >
-        <h2>
-          My Missions
-        </h2>
-        <ul
-          class="joined-missions"
-        >
-          <li>
-            <p>
-              You didn't join any mission yet.
-            </p>
-          </li>
-        </ul>
-      </div>
+        <thead>
+          <tr>
+            <th>
+              Mission
+            </th>
+            <th>
+              Description
+            </th>
+            <th>
+              Status
+            </th>
+            <th />
+          </tr>
+        </thead>
+        <tbody />
+      </table>
     </div>
   </div>,
   "debug": [Function],

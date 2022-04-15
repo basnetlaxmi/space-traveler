@@ -38,7 +38,6 @@ const missionReducer = (state = initialState, action) => {
         }
         return { ...mission, reserved: true };
       });
-      console.log(newState);
       return {
         ...state,
         missions: [...newState],

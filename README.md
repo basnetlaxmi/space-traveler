@@ -55,7 +55,7 @@ for https:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/saied2035/space-traveler/issues).
+Feel free to check the [issues page](https://github.com/basnet_luxmee/space-traveler/issues).
 
 ## Show your support
 

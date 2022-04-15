@@ -13,7 +13,7 @@
 
 ### Live Demo 
 
-[Live Deomo](https://saied-laxmi-spacetraveler.netlify.app/missions)
+[Live Demo](https://saied-laxmi-spacetraveler.netlify.app)
 
 ## Getting Started
 

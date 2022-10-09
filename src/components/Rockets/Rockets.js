@@ -6,7 +6,7 @@ import Rocket from './Rocket/Rocket';
 const Rockets = () => {
   const rockets = useSelector((state) => state.rocketsReducer.rockets, shallowEqual);
   return (
-    <ul id="rocket-list">
+    <ul className="flex flex-column pa4 w-100" style={{ gap: '1rem' }}>
       {
       rockets.map((rocket) => (
         <Rocket

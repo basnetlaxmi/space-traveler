@@ -18,22 +18,29 @@ const Rocket = ({
   };
   return (
 
-    <li className="rocket-card">
-      <img alt="rocket img" src={flickrImages[0]} />
-      <p className="rocket-name">{name}</p>
-      <p className="rocket-description">
-        <span className={`badge ${reserved ? '' : 'dn'}`}>
-          Reserved
-        </span>
-        {description}
-      </p>
-      <button
-        onClick={() => dispatch(reserveRocket(id))}
-        style={reserved ? cancelReserveBtnStyle : reserveBtnStyle}
-        type="button"
-      >
-        { reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
-      </button>
+    <li
+      className="flex flex-row-ns flex-column-m flex-column items-start-ns
+     items-center-m item-center w-100"
+      style={{ gap: '1.5rem' }}
+    >
+      <img alt="rocket-img" className="br3 w-40-ns w-80-m w-100" src={flickrImages[0]} />
+      <aside className="flex flex-column items-start-ns items-center-m items-center">
+        <p className="rocket-name f3 ma0">{name}</p>
+        <p className="rocket-description f4 tl-ns tc-m tc">
+          <span className={`badge ${reserved ? '' : 'dn'}`}>
+            Reserved
+          </span>
+          {description}
+        </p>
+        <button
+          className="reserve-btn f4 br3 pa2"
+          onClick={() => dispatch(reserveRocket(id))}
+          style={reserved ? cancelReserveBtnStyle : reserveBtnStyle}
+          type="button"
+        >
+          { reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
+        </button>
+      </aside>
     </li>
 
   );

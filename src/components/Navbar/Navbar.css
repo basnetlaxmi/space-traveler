@@ -1,16 +1,13 @@
 header {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  padding: 0 4rem 0.5rem 1rem;
-  align-items: center;
+  gap: 0rem 1.5rem;
+  padding: 0.5rem 1rem;
   border-bottom: 2px solid #ccc;
 }
-
-nav {
-  margin-left: auto;
+#site-info {
+  gap: 1rem;
 }
-
 ul {
   list-style: none;
 }
@@ -22,7 +19,7 @@ a {
 
 #nav-list {
   display: flex;
-  gap: 2vw;
+  gap: 1rem;
 }
 
 #nav-list > li > a {

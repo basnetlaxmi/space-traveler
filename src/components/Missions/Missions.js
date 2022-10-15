@@ -5,22 +5,15 @@ import Mission from './Mission';
 const Missions = () => {
   const missions = useSelector((state) => state.missionReducer.missions);
   return (
-    <div className="ma4">
-      <table className="table table-striped table-bordered">
-        <thead>
-          <tr>
-            <th>Mission</th>
-            <th>Description</th>
-            <th>Status</th>
-            <th>{}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {missions.map((mission) => <Mission mission={mission} key={mission.id} />)}
-
-        </tbody>
-      </table>
-    </div>
+    <section>
+      <p>
+        <span>Mission</span>
+        <span>Description</span>
+        <span>Status</span>
+        <span>Action</span>
+      </p>
+      {missions.map((mission) => <Mission mission={mission} key={mission.id} />)}
+    </section>
   );
 };
 

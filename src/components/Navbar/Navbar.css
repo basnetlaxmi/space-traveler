@@ -1,13 +1,15 @@
 header {
   display: flex;
   flex-wrap: wrap;
-  gap: 0rem 1.5rem;
+  gap: 0 1.5rem;
   padding: 0.5rem 1rem;
   border-bottom: 2px solid #ccc;
 }
+
 #site-info {
   gap: 1rem;
 }
+
 ul {
   list-style: none;
 }

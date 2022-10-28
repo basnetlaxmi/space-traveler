@@ -4,7 +4,6 @@
   padding-top: 0.5rem;
 }
 
-
 .reserved-rockets-container > h2,
 .joined-mission-container > h2 {
   margin-bottom: 0;
@@ -41,8 +40,9 @@
 .cancel-rocket {
   font-weight: bold;
 }
+
 .btn-danger {
-    color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545;
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
 }

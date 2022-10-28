@@ -5,11 +5,11 @@
 
 .rocket-name {
   font-weight: bold;
-  flex:  0.3;
+  flex: 0.3;
 }
 
 .rocket-description {
-  flex:  1;
+  flex: 1;
 }
 
 .reserve-btn {
@@ -17,14 +17,14 @@
   margin-right: unset;
 }
 
-
 @media screen and (min-width: 961px) {
-.items-start-ns {
-  align-items: unset;
-}
-.reserve-btn {
-  margin-right: auto;
-}  
+  .items-start-ns {
+    align-items: unset;
+  }
+
+  .reserve-btn {
+    margin-right: auto;
+  }
 }
 
 .badge {

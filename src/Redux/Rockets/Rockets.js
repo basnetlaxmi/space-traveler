@@ -6,8 +6,15 @@ const LOAD_ROCKETS_FAILED = 'space-traveler/Rockets/LOAD_ROCKETS_FAILED';
 
 const RESERVE_OR_CANCEL_ROCKET = 'space-traveler/Rockets/RESERVE_OR_CANCEL_ROCKET';
 export const rocketLoad = () => (dispatch) => {
+  if (localStorage.getItem('rockets')) {
+    dispatch({ type: ROCKETS_LOADED, payload: JSON.parse(localStorage.getItem('rockets')) });
+    return;
+  }
   dispatch({ type: LOAD_ROCKETS });
-  loadRockets().then((result) => dispatch({ type: ROCKETS_LOADED, payload: result }))
+  loadRockets().then((result) => {
+    localStorage.setItem('rockets', JSON.stringify(result));
+    return dispatch({ type: ROCKETS_LOADED, payload: result });
+  })
     .catch((error) => dispatch({ type: LOAD_ROCKETS_FAILED, payload: error }));
 };
 
@@ -26,6 +33,11 @@ const rocketsReducer = (state = initialState, action = {}) => {
     case LOAD_ROCKETS_FAILED:
       return { ...state, error: action.payload, wait: false };
     case RESERVE_OR_CANCEL_ROCKET:
+      {
+        const rockets = JSON.parse(localStorage.getItem('rockets'));
+        rockets[action.payload].reserved = !state.rockets[action.payload].reserved;
+        localStorage.setItem('rockets', JSON.stringify(rockets));
+      }
       return {
         ...state,
         rockets: [

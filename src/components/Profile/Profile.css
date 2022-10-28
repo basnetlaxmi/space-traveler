@@ -4,9 +4,6 @@
   padding-top: 0.5rem;
 }
 
-.joined-mission-container {
-  margin-left: 100px;
-}
 
 .reserved-rockets-container > h2,
 .joined-mission-container > h2 {
@@ -23,15 +20,9 @@
   padding: 0;
 }
 
-.joined-missions {
-  width: 50vw;
-}
-
 .reserved-rockets > li,
 .joined-missions > li {
   border-bottom: 1.5px solid #dfdfdf;
-  padding-left: 1rem;
-  padding-bottom: 0.5rem;
 }
 
 .reserved-rockets > li:last-child,
@@ -45,14 +36,14 @@
 }
 
 .profile-leave-btn {
-  width: 92px;
-  height: 30px;
-  font-size: 11px;
   font-weight: bold;
-  margin-top: 1rem;
 }
 
 .cancel-rocket {
-  font-size: 11px;
   font-weight: bold;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
 }

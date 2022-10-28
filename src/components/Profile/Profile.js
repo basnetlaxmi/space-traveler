@@ -12,7 +12,7 @@ const Profile = () => {
     (state) => state.missionReducer.missions.filter((mission) => mission.reserved === true),
   );
   return (
-    <div className="d-flex">
+    <div className="flex justify-between pl5 pr5">
       <div className="reserved-rockets-container">
         <h2>My Rockets</h2>
         <ul className="reserved-rockets">
@@ -20,11 +20,11 @@ const Profile = () => {
          reservedRockets.length
            ? reservedRockets.map((rocket) => (
              (
-               <li key={rocket.id} className="d-flex justify-content-between">
+               <li key={rocket.id} className="flex justify-between items-center pa3">
                  <p>{rocket.name}</p>
                  <button
                    onClick={() => dispatch(reserveRocket(rocket.id))}
-                   className="cancel-rocket ms-5 mt-1 me-2 btn-danger"
+                   className="cancel-rocket pa1 pl2 pr2 btn-danger"
                    type="button"
                  >
                    Cancel Reservation
@@ -45,9 +45,9 @@ const Profile = () => {
         joinedMission.length
           ? joinedMission.map((mission) => (
 
-            <li className="d-flex justify-content-between" key={mission.id}>
+            <li className="flex justify-between items-center pa3" key={mission.id}>
               <p>{mission.name}</p>
-              <button type="button" className="profile-leave-btn ms-5 mt-1 me-2 btn-danger" onClick={() => dispatch(leaveMission(mission.id))}>Leave Mission</button>
+              <button type="button" className="profile-leave-btn pa1 pl2 pr2 btn-danger" onClick={() => dispatch(leaveMission(mission.id))}>Leave Mission</button>
             </li>
 
           ))

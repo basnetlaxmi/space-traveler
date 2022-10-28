@@ -1,24 +1,14 @@
-body {
-  overflow-x: hidden;
-}
-
-td {
-  font-size: 1rem;
-}
-
 .member-btn {
   background-color: #828990;
   color: #fff;
   width: 150px;
-  padding: 0;
-  margin: 50px auto;
+  padding: 2px;
   border-radius: 5px;
 }
 
 .join-leave-btn {
   width: 150px;
   padding: 5px;
-  margin: 50px auto;
   border-radius: 5px;
 }
 

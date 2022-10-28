@@ -12,19 +12,19 @@ const Profile = () => {
     (state) => state.missionReducer.missions.filter((mission) => mission.reserved === true),
   );
   return (
-    <div className="d-flex">
-      <div className="reserved-rockets-container">
-        <h2>My Rockets</h2>
+    <div className="flex justify-between flex-row-ns flex-column pl5-ns pr5-ns pl2-m pr2-m pl1 pr1">
+      <div>
+        <h2 className="tc mb0">My Rockets</h2>
         <ul className="reserved-rockets">
           {
          reservedRockets.length
            ? reservedRockets.map((rocket) => (
              (
-               <li key={rocket.id} className="d-flex justify-content-between">
+               <li key={rocket.id} className="flex flex-row-ns flex-column-m flex-column justify-between items-center pa3" style={{ gap: '0.75rem' }}>
                  <p>{rocket.name}</p>
                  <button
                    onClick={() => dispatch(reserveRocket(rocket.id))}
-                   className="cancel-rocket ms-5 mt-1 me-2 btn-danger"
+                   className="cancel-rocket f6 pa1 pl2 pr2 btn-danger"
                    type="button"
                  >
                    Cancel Reservation
@@ -39,15 +39,19 @@ const Profile = () => {
         </ul>
       </div>
       <div className="joined-mission-container">
-        <h2>My Missions</h2>
-        <ul className="joined-missions">
+        <h2 className="tc">My Missions</h2>
+        <ul className="joined-missions" style={{ maxHeight: '65vh', overflow: 'auto' }}>
           {
         joinedMission.length
           ? joinedMission.map((mission) => (
 
-            <li className="d-flex justify-content-between" key={mission.id}>
+            <li
+              className="flex flex-row-ns flex-column-m flex-column justify-between items-center pa3"
+              style={{ gap: '0.75rem' }}
+              key={mission.id}
+            >
               <p>{mission.name}</p>
-              <button type="button" className="profile-leave-btn ms-5 mt-1 me-2 btn-danger" onClick={() => dispatch(leaveMission(mission.id))}>Leave Mission</button>
+              <button type="button" className="profile-leave-btn f6 pa1 pl2 pr2 btn-danger" onClick={() => dispatch(leaveMission(mission.id))}>Leave Mission</button>
             </li>
 
           ))

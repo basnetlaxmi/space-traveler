@@ -23,7 +23,7 @@ const Rocket = ({
      items-center-m item-center w-100 mb4"
       style={{ gap: '1.5rem' }}
     >
-      <img alt="rocket-img" className="br3 w-40-ns w-80-m w-100" src={flickrImages[0]} />
+      <img alt="rocket-img" className="br3 w-40-ns w-80-m w-100" src={flickrImages[0]} style={{ maxWidth: '800px' }} />
       <aside className="flex flex-column items-start-ns items-center-m items-center">
         <p className="rocket-name f3 ma0">{name}</p>
         <p className="rocket-description f4 tl-ns tc-m tc pl0-ns pr0-ns pl1 pr1">

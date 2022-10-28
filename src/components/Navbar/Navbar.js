@@ -3,10 +3,13 @@ import './Navbar.css';
 import logo from '../../planet.png';
 
 const Navbar = () => (
-  <header>
-    <img alt="logo" src={logo} />
-
-    <h1>{'Space Travelers\' Hub'}</h1>
+  <header className="flex-row-ns flex-column-m flex-column-m items-center justify-between-ns
+  justify-center-m justify-center"
+  >
+    <div id="site-info" className="flex items-center">
+      <img alt="logo" src={logo} />
+      <h1 className="f3-ns f4">{'Space Travelers\' Hub'}</h1>
+    </div>
     <nav>
       <ul id="nav-list">
         <li>

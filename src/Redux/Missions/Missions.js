@@ -5,7 +5,12 @@ const JOIN_MISSION = 'space-traveler/Missions/JOIN_MISSION';
 const LEAVE_MISSION = 'space-traveler/Missions/LEAVE_MISSION';
 // Action
 export const fetchMission = () => async (dispatch) => {
+  if (localStorage.getItem('missions')) {
+    dispatch({ type: FETCH_MISSIONS, payload: JSON.parse(localStorage.getItem('missions')) });
+    return;
+  }
   const res = await fetchMissionsData();
+  localStorage.setItem('missions', JSON.stringify(res));
   dispatch({ type: FETCH_MISSIONS, payload: res });
 };
 
@@ -33,10 +38,13 @@ const missionReducer = (state = initialState, action) => {
       };
     case JOIN_MISSION:
     {
-      const newState = state.missions.map((mission) => {
+      const newState = state.missions.map((mission, i) => {
         if (mission.id !== action.payload) {
           return mission;
         }
+        const missions = JSON.parse(localStorage.getItem('missions'));
+        missions[i].reserved = true;
+        localStorage.setItem('missions', JSON.stringify(missions));
         return { ...mission, reserved: true };
       });
       return {
@@ -47,10 +55,13 @@ const missionReducer = (state = initialState, action) => {
     }
     case LEAVE_MISSION:
     {
-      const newState = state.missions.map((mission) => {
+      const newState = state.missions.map((mission, i) => {
         if (mission.id !== action.payload) {
           return mission;
         }
+        const missions = JSON.parse(localStorage.getItem('missions'));
+        missions[i].reserved = false;
+        localStorage.setItem('missions', JSON.stringify(missions));
         return { ...mission, reserved: false };
       });
       return {

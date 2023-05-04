@@ -1,8 +1,17 @@
-const rockets = 'https://api.spacexdata.com/v3/rockets';
-const missions = 'https://api.spacexdata.com/v3/missions';
-
+const url = process.env.REACT_APP_CONTENTFUL_URL;
+const apiKey = process.env.REACT_APP_AUTH_KEY;
+const rocketsQuery = process.env.REACT_APP_ROCKETS_QUERY;
+const missionsQuery = process.env.REACT_APP_MISSIONS_QUERY;
 const loadRockets = async () => {
-  const response = await fetch(rockets).then((res) => res.json()).then((allRockets) => allRockets);
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({ query: rocketsQuery }),
+  }).then((res) => res.json())
+    .then((allRockets) => allRockets.data.spaceTravellerCollection.items[0].rockets);
   const rocketsArr = response.map((rocket) => (
     {
       id: rocket.id,
@@ -16,7 +25,15 @@ const loadRockets = async () => {
 };
 
 const fetchMissionsData = async () => {
-  const response = await fetch(missions).then((res) => res.json()).then((result) => result);
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({ query: missionsQuery }),
+  }).then((res) => res.json())
+    .then((result) => result.data.spaceTravellerCollection.items[0].missions);
   const missionArr = response.map((mission) => (
     {
       id: mission.mission_id,
